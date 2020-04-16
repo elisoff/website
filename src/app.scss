@@ -1,0 +1,83 @@
+@import './settings.scss';
+
+.app {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &__sidebar {
+        margin: 20px 20px;
+        max-width: 300px;
+
+        &__image {
+            margin: 10px;
+            width: 120px;
+            float: right;
+        }
+
+        &__text {
+            max-width: none;
+            &-highlight {
+                font-family: 'Passion One', sans-serif;
+                color: $accent-color;
+                font-size: 32pt;
+            }
+        }
+    }
+
+    &__content {
+        min-width: 360px;
+        max-width: 900px;
+        width: 50%;
+        margin: 6px;
+    }
+
+    &__bottom-cat {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 30%;
+        min-width: 180px;
+    }
+}
+
+.footer {
+    position: static;
+    text-align: left;
+    bottom: 0;
+    font-size: 10pt;
+    margin: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+    .app {
+        &__sidebar {
+            max-width: none;
+
+            &__image {
+                float: left;
+                width: 140px;
+            }
+
+            &__text {
+                float: right;
+                max-width: 300px;
+            }
+        }
+
+        &__content {
+            min-width: 750px;
+        }
+
+        &__bottom-cat {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 15%;
+        }
+    }
+
+    .footer {
+        text-align: center;
+    }
+}

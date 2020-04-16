@@ -1,0 +1,44 @@
+@import '../settings.scss';
+
+.resume {
+    &__container {
+        &--hidden {
+            display: none;
+        }
+        height: 100%;
+    }
+
+    &__iframe {
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        iframe {
+            height: 900px;
+            margin: 10px;
+            border: none;
+            box-shadow: 0px 2px 4px #ec84553d;
+        }
+    }
+
+    &__download-button {
+        background-color: $accent-color;
+        border: none;
+        border-radius: 4px;
+        color: #fff;
+        padding: 10px;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        margin: 10px auto;
+        text-shadow: 0px 1px 3px $accent-color-darker;
+
+        svg {
+            margin: 6px;
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: $accent-color-darker;
+        }
+    }
+}

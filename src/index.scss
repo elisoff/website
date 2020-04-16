@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&family=Source+Sans+Pro:wght@200;400&display=swap');
+
+@import './settings.scss';
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 11pt;
+    color: $font-color;
+    background: #f6ebea38;
+}
+
+a,
+a:visited,
+a:active {
+    color: $primary-color;
+    text-decoration: none;
+}
+
+a:hover {
+    color: $primary-color-darker;
+    text-decoration: underline;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    justify-content: space-between;
+}
