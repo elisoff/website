@@ -56,10 +56,16 @@ const About = () => (
 
 const Footer = () => (
     <div className="footer">
-        Illustrations by{' '}
-        <a href="https://icons8.com" target="_blank" rel="noopener noreferrer">
-            Icons8
-        </a>
+        <p>
+            Illustrations by{' '}
+            <a
+                href="https://icons8.com"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Icons8
+            </a>
+        </p>
     </div>
 );
 
@@ -79,8 +85,8 @@ const App = () => {
                     alt="Cat working"
                     className="app__bottom-cat"
                 />
+                <Footer />
             </div>
-            <Footer />
         </>
     );
 };

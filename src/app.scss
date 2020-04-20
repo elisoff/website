@@ -2,12 +2,19 @@
 
 .app {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
 
     &__sidebar {
         margin: 20px 20px;
         max-width: 300px;
+        align-self: center;
 
         &__image {
             margin: 10px;
@@ -30,22 +37,26 @@
         max-width: 900px;
         width: 50%;
         margin: 6px;
+        align-self: center;
     }
 
     &__bottom-cat {
         position: fixed;
-        bottom: 0;
-        right: 0;
-        width: 30%;
-        min-width: 180px;
+        bottom: 25px;
+        right: 10px;
+        width: 15%;
+        min-width: 150px;
     }
 }
 
 .footer {
-    position: static;
-    text-align: left;
-    bottom: 0;
     font-size: 10pt;
+    align-self: flex-end;
+    width: 100%;
+    flex: 1 1 auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
     margin: 10px;
 }
 
@@ -74,10 +85,14 @@
             bottom: 0;
             right: 0;
             width: 15%;
+            min-width: 120px;
         }
     }
 
-    .footer {
-        text-align: center;
-    }
+    // .footer {
+    //     flex: 1 1 auto;
+    //     display: flex;
+    //     align-items: flex-end;
+    //     justify-content: center;
+    // }
 }

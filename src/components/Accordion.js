@@ -9,8 +9,6 @@ const Accordion = ({ title, body, initAsExpanded }) => {
     const [isExpanded, setExpanded] = useState(initAsExpanded);
     const accordionBody = React.createRef();
 
-    console.log(initAsExpanded);
-
     const handleAccordionClick = (e) => {
         if (accordionBody.current) {
             // TODO animation
