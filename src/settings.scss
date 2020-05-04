@@ -4,3 +4,27 @@ $accent-color: #b2d479;
 $accent-color-darker: #8cab5c;
 
 $font-color: #a4927a;
+
+
+/* HEX */
+$color1: #413c58ff;
+$color1-d: #2F2A46;
+$color2: #a3c4bcff;
+$color3: #bfd7b5ff;
+$color3-d: #73856D;
+$color3-l: #EEFDE2;
+$color4: #e7efc5ff;
+$color4-l: #F4F9D2;
+$color4-d: #969982;
+$color5: #f2dda4ff;
+
+/* GRADIENT */
+$gradient-top: linear-gradient(0deg, #413c58ff, #a3c4bcff, #bfd7b5ff, #e7efc5ff, #f2dda4ff);
+$gradient-right: linear-gradient(90deg, #413c58ff, #a3c4bcff, #bfd7b5ff, #e7efc5ff, #f2dda4ff);
+$gradient-bottom: linear-gradient(180deg, #413c58ff, #a3c4bcff, #bfd7b5ff, #e7efc5ff, #f2dda4ff);
+$gradient-left: linear-gradient(270deg, #413c58ff, #a3c4bcff, #bfd7b5ff, #e7efc5ff, #f2dda4ff);
+$gradient-top-right: linear-gradient(45deg, #413c58ff, #a3c4bcff, #bfd7b5ff, #e7efc5ff, #f2dda4ff);
+$gradient-bottom-right: linear-gradient(135deg, #413c58ff, #a3c4bcff, #bfd7b5ff, #e7efc5ff, #f2dda4ff);
+$gradient-top-left: linear-gradient(225deg, #413c58ff, #a3c4bcff, #bfd7b5ff, #e7efc5ff, #f2dda4ff);
+$gradient-bottom-left: linear-gradient(315deg, #413c58ff, #a3c4bcff, #bfd7b5ff, #e7efc5ff, #f2dda4ff);
+$gradient-radial: radial-gradient(#413c58ff, #a3c4bcff, #bfd7b5ff, #e7efc5ff, #f2dda4ff);

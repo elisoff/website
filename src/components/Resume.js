@@ -7,7 +7,7 @@ import Accordion from './Accordion';
 
 import './resume.scss';
 
-const Resume = () => {
+const Resume = ({ initAsExpanded }) => {
     const handleDownloadClick = () => {
         getResumeFilePdfLink().then((pdfLink) => window.open(pdfLink));
     };
@@ -16,6 +16,7 @@ const Resume = () => {
         <div className="resume">
             <Accordion
                 title="My resume"
+                initAsExpanded={initAsExpanded}
                 body={
                     <>
                         <div className="resume__container">

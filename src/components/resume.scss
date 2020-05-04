@@ -16,21 +16,22 @@
             height: 900px;
             margin: 10px;
             border: none;
-            box-shadow: 0px 2px 4px #ec84553d;
+            box-shadow: 0px 2px 4px $color4;
         }
     }
 
     &__download-button {
-        background-color: $accent-color;
+        background-color: $color1;
         border: none;
         border-radius: 4px;
         color: #fff;
         padding: 10px;
-        font-size: 14px;
         display: flex;
         align-items: center;
         margin: 10px auto;
-        text-shadow: 0px 1px 3px $accent-color-darker;
+        text-shadow: 0px 1px 3px $color1-d;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 10pt;
 
         svg {
             margin: 6px;
@@ -38,7 +39,7 @@
 
         &:hover {
             cursor: pointer;
-            background-color: $accent-color-darker;
+            background-color: $color1-d;
         }
     }
 }

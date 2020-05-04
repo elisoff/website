@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown, faAngleRight } from '@fortawesome/free-solid-svg-icons';
@@ -23,27 +23,30 @@ const Accordion = ({ title, body, initAsExpanded }) => {
         setExpanded(!isExpanded);
     };
 
+    useEffect(() => {
+        setExpanded(initAsExpanded);
+
+    }, [initAsExpanded])
+
     const accordionCarret = isExpanded ? faAngleDown : faAngleRight;
 
     return (
-        <div className="accordion">
-            <div className="accordion__title">
-                <button
-                    type="button"
-                    className="accordion__button"
-                    onClick={handleAccordionClick.bind(this)}
-                >
-                    <FontAwesomeIcon icon={accordionCarret} />
-                    {title}
-                </button>
-            </div>
-
+        <section className="accordion">
+          
+            <h1
+                className=" accordion__title"
+                onClick={handleAccordionClick.bind(this)}
+            >
+                <FontAwesomeIcon icon={accordionCarret} />
+                {title}
+            </h1>
+            
             {isExpanded && (
-                <div className="accordion__body" ref={accordionBody}>
+                <div className="accordion__body animated fadeIn fast" ref={accordionBody}>
                     {body}
                 </div>
             )}
-        </div>
+        </section>
     );
 };
 

@@ -1,29 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Passion+One&family=Source+Sans+Pro:wght@200;400&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Passion+One&family=Source+Sans+Pro:wght@200;400&display=swap');
+
+//@import url('https://fonts.googleapis.com/css2?family=Life+Savers&family=Open+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Sofia&display=swap');
 
 @import './settings.scss';
 
 body {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 11pt;
-    color: $font-color;
-    background: #f6ebea38;
+    font-family: 'Roboto Slab', serif;
+    font-size: 10pt;
+    color: $color1;
+    background: #fff;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Sofia', cursive;
 }
 
 a,
 a:visited,
 a:active {
-    color: $primary-color;
+    color: $color3;
     text-decoration: none;
+    text-shadow: 0px 1px 2px $color3-l;
 }
 
 a:hover {
-    color: $primary-color-darker;
-    text-decoration: underline;
+    color: $color3-d;
 }
-
-// #root {
-//     display: flex;
-//     flex-direction: column;
-    
-//     justify-content: space-between;
-// }

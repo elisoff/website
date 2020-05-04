@@ -1,27 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Markdown from 'markdown-to-jsx';
 
 import Resume from './components/Resume';
 import Accordion from './components/Accordion';
 
 import raw from 'raw.macro';
-import GingerCat759 from './images/ginger-cat-759.png';
-import GingerCat735 from './images/ginger-cat-735.png';
 
+import AvatarPhoto from './images/me.jpg';
+
+import 'animate.css';
 import './app.scss';
 
 const Sidebar = () => (
     <div className="app__sidebar">
-        <img
-            src={GingerCat735}
-            alt="Cat with an idea"
-            className="app__sidebar__image"
-        />
+        <div className="app__sidebar__avatar-wrapper">
+            <img
+                src={AvatarPhoto}
+                alt="Elis Offerni"
+                className="animated bounce fast"
+            />
+        </div>
 
         <div className="app__sidebar__text">
             Hi! I'm
-            <div className="app__sidebar__text-highlight">Elis Offerni</div>I
-            love cats and coding!
+            <h1 className="app__sidebar__text-highlight">Elis Offerni</h1>I love
+            cats and coding!
             <p>
                 Here you'll find some information about me and my resume for
                 viewing and downloading. I'm also on{' '}
@@ -46,11 +49,11 @@ const Sidebar = () => (
     </div>
 );
 
-const About = () => (
+const About = ({ initAsExpanded }) => (
     <Accordion
         title="About me"
         body={<Markdown>{raw('./content/about.md')}</Markdown>}
-        initAsExpanded={true}
+        initAsExpanded={initAsExpanded}
     />
 );
 
@@ -70,21 +73,30 @@ const Footer = () => (
 );
 
 const App = () => {
+    const [shouldOpenResume, setResumeOpened] = useState(false);
+
+    useEffect(() => {
+        const searchQuery = window.location.search;
+        const queryParams = new URLSearchParams(searchQuery);
+
+        if (queryParams.has('resume')) {
+            const shouldOpenResume = queryParams.get('resume') === 'true';
+
+            setResumeOpened(shouldOpenResume);
+        }
+    }, []);
+
     return (
         <>
-            <div className="app">
+            <div className="app animated fadeIn">
+                <div className="app__bg"></div>
+
                 <Sidebar />
                 <div className="app__content">
-                    <About />
+                    <About initAsExpanded={!shouldOpenResume} />
 
-                    <Resume />
+                    <Resume initAsExpanded={shouldOpenResume} />
                 </div>
-
-                <img
-                    src={GingerCat759}
-                    alt="Cat working"
-                    className="app__bottom-cat"
-                />
                 <Footer />
             </div>
         </>
